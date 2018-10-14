@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("const arr = [1, 2, 3];\n\nconst iAmJavascriptES6 = () => console.log(...arr);\n\nwindow.iAmJavascriptES6 = iAmJavascriptES6;\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("console.log('js your fave');\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ })
 

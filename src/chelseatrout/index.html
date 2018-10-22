@@ -2,50 +2,58 @@
 <html>
 <head>
   <link rel="stylesheet" type="text/css" href="index.css">
-  <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
 </head>
 
 <body>
+  <!-- ABOUT PAGE -->
   <section class="landing">
-    <div class="emoji-container">
-      <div class="emoji-content">
-        <!-- <div>hand</div> -->
-        <img src="/images/Noto_Emoji-hand.svg"/>
+    <nav class="nav-menu">
+      <h2>Chelsea Trout</h2>
+      <a id="about-link" href="/chelseatrout">about</a>
+      <a id="project-accordion-button">projects</a>
+      <nav class="nav-accordion isSquashed">
+        <div class="nav-accordion-links">
+          <a href="/chelseatrout/projects/first">first</a>
+          <a href="/chelseatrout/projects/second">second</a>
+          <a href="/chelseatrout/projects/third">third</a>
+        </div>
+        <div id="nav-accordion-buffer" class="nav-accordion-buffer">
+          <a href="/chelseatrout/contact" id="contact-link">contact</a>
+        </div>
+      </nav>
+    </nav>
+    <article>
+      <div class="image">
+        <img src="https://picsum.photos/400/600">
       </div>
-      <div class="emoji-content">
-        <!-- <div>made</div> -->
-        <img src="/images/Noto_Emoji-made.svg"/>
-      </div>
-      <div class="emoji-content">
-        <!-- <div>land</div> -->
-        <img src="/images/Noto_Emoji-land.svg"/>
-      </div>
-      <div class="emoji-content">
-        <!-- <div>page</div> -->
-        <img src="/images/Noto_Emoji-page.svg"/>
-      </div>
-      <div class="sitename">
-        HandMadeLandPage
-      </div>
-    </div>
-    <div class="bg-overlay"></div>
-    <h1><span>Free</span> Handcrafted HTML/CSS For Your</h1>
-    <div class="scrolling-container">
-      <div class="scrolling-window">
-        <div class="scrolling-content">
-          <div class="scrollanim one">Small Business</div>
-          <div class="scrollanim two">New Product</div>
-          <div class="scrollanim three">Special Occasion</div>
-          <div class="scrollanim four">Upcoming Event</div>
-          <div class="scrollanim five">Self</div>
+      <div class="content">
+        <div class="text">
+          Bacon ipsum dolor amet ham tail burgdoggen chicken, turducken pork loin short ribs bacon landjaeger. Andouille turkey pork loin, meatball tongue ball tip sirloin biltong chuck bacon hamburger porchetta alcatra ribeye kevin. Porchetta ground round pancetta flank chicken. Beef ribs drumstick fatback chicken, pastrami short loin spare ribs jowl. Spare ribs picanha leberkas, rump biltong ham bacon drumstick. Swine bresaola porchetta fatback pork chuck brisket tongue sausage pork chop short loin rump. Ribeye beef ribs sausage picanha sirloin boudin beef frankfurter strip steak flank meatball meatloaf hamburger.
+          <br><br>
+          ilet mignon rump tail meatball tongue. Beef fatback rump, brisket beef ribs strip steak cow filet mignon flank drumstick ground round pastrami bresaola swine hamburger. Short loin brisket shankle ribeye shoulder drumstick filet mignon prosciutto corned beef jowl frankfurter tenderloin pancetta venison. Pancetta tail pastrami tongue chuck kielbasa. Ham picanha hamburger beef buffalo short ribs. Picanha turkey kielbasa shankle turducken porchetta flank bresaola tail kevin rump sausage brisket bacon.
+          <br><br>
+          Pork loin picanha ground round chuck porchetta. Beef short loin pig alcatra, pork belly burgdoggen hamburger tenderloin shank prosciutto sirloin porchetta short ribs. Pork loin ham t-bone pancetta. Turducken andouille burgdoggen tail, ribeye meatloaf flank. Boudin tenderloin ham biltong pancetta pork belly jerky.
         </div>
       </div>
-    </div>
-    <div class="cta-input-container">
-      <button>Sign Up</button>
-    </div>
+    </article>
   </section>
-  <!-- <section class="why"></section> -->
-  <script src="main.js"></script>
 </body>
 </html>
+
+<script>
+//nav
+  let projectsNavActive = false;
+  const projectsButton = document.getElementById('project-accordion-button');
+  const accordionBuffer = document.getElementById('nav-accordion-buffer');
+
+  projectsButton.addEventListener('click', () => {
+    if (!projectsNavActive) {
+      accordionBuffer.classList.add('isSlid');
+      return projectsNavActive = true;
+    }
+    accordionBuffer.classList.remove('isSlid');
+    return projectsNavActive = false;
+  });
+
+</script>

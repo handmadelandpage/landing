@@ -1,0 +1,96 @@
+body {
+  font-family: 'Libre Baskerville', serif;
+}
+
+.landing {
+  display: flex;
+}
+
+.nav-menu {
+  width: 220px;
+  min-width: 220px;
+  /* background-color: aliceblue; */
+  padding: 4em;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-menu * {
+  text-decoration: none;
+  color: black;
+  margin-bottom: .5em;
+}
+
+.nav-menu a {
+  cursor: pointer;
+}
+
+.nav-accordion {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.nav-accordion-links {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1em;
+}
+
+.nav-accordion-buffer {
+  /* background-color: palegreen; */
+  background-color: white;
+  width: 100%;
+  position: absolute;
+  height: 10em;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-accordion-buffer.isSlidDefault {
+  transform: translateY(50%);
+}
+
+.nav-accordion-buffer.isSlid {
+  animation: slidebufferdown .5s ease-out forwards;
+}
+
+@keyframes slidebufferdown {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(50%);
+  }
+}
+
+article {
+  /* background-color: lightgray; */
+  display: flex;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 4em;
+}
+
+div.image, div.content {
+  width: 50%;
+}
+
+article div.content {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+article div.image img {
+  width: 75%;
+}
+
+article div.image {
+  text-align: center;
+}
+
+article div.content .text {
+  padding-left: 5em;
+  padding-right: 5em;
+}

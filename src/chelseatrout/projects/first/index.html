@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="../../index.css">
+  <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+</head>
+
+<body>
+  <!-- PROJECTS PROJECT PAGE -->
+  <section class="landing">
+    <nav class="nav-menu">
+      <h2>Chelsea Trout</h2>
+      <a id="about-link" href="/chelseatrout">about</a>
+      <a id="project-accordion-button">projects</a>
+      <nav class="nav-accordion isSquashed">
+        <div class="nav-accordion-links">
+          <a href="/chelseatrout/projects/first">first</a>
+          <a href="/chelseatrout/projects/second">second</a>
+          <a href="/chelseatrout/projects/third">third</a>
+        </div>
+        <div id="nav-accordion-buffer" class="nav-accordion-buffer isSlidDefault">
+          <a href="/chelseatrout/contact" id="contact-link">contact</a>
+        </div>
+      </nav>
+    </nav>
+    <article style="flex-direction: column">
+      <div class="image">
+        <img src="https://picsum.photos/700/400">
+      </div>
+      <div class="content">
+        <div class="text" style="padding-top: 2em;">
+          Bacon ipsum dolor amet ham tail burgdoggen chicken, turducken pork loin short ribs bacon landjaeger. Andouille turkey pork loin, meatball tongue ball tip sirloin biltong chuck bacon hamburger porchetta alcatra ribeye kevin. Porchetta ground round pancetta flank chicken. Beef ribs drumstick fatback chicken, pastrami short loin spare ribs jowl.<br><br>Spare ribs picanha leberkas, rump biltong ham bacon drumstick. Swine bresaola porchetta fatback pork chuck brisket tongue sausage pork chop short loin rump. Ribeye beef ribs sausage picanha sirloin boudin beef frankfurter strip steak flank meatball meatloaf hamburger.
+        </div>
+      </div>
+    </article>
+  </section>
+</body>
+</html>
+
+<script>
+//nav
+  let projectsNavActive = true;
+  const projectsButton = document.getElementById('project-accordion-button');
+  const accordionBuffer = document.getElementById('nav-accordion-buffer');
+
+  projectsButton.addEventListener('click', () => {
+    if (!projectsNavActive) {
+      accordionBuffer.classList.add('isSlid');
+      return projectsNavActive = true;
+    }
+    accordionBuffer.classList.remove('isSlidDefault');
+    accordionBuffer.classList.remove('isSlid');
+    return projectsNavActive = false;
+  });
+
+</script>

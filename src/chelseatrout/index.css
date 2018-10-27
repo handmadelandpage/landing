@@ -1,9 +1,26 @@
 body {
   font-family: 'Libre Baskerville', serif;
+  background-color: #F8C5B3;
+}
+
+a.chelseaHeader {
+  text-decoration: none;
+  color: black;
+  color: #9B7E46;
+  font-family: 'Coustard', serif;
+  letter-spacing: 1px;
 }
 
 .landing {
   display: flex;
+}
+
+.hideOnDesktop {
+  display: none;
+}
+
+.hideOnMobile {
+  display: initial;
 }
 
 .nav-menu {
@@ -18,6 +35,7 @@ body {
 .nav-menu * {
   text-decoration: none;
   color: black;
+  color: #9B7E46;
   margin-bottom: .5em;
 }
 
@@ -40,6 +58,7 @@ body {
 .nav-accordion-buffer {
   /* background-color: palegreen; */
   background-color: white;
+  background-color: #F8C5B3;
   width: 100%;
   position: absolute;
   height: 10em;
@@ -70,11 +89,18 @@ article {
   width: 100%;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   padding-top: 4em;
 }
 
 div.image, div.content {
   width: 50%;
+}
+
+div.image.isRoot {
+  width: 100%;
+  max-width: 100%;
+  text-align: left;
 }
 
 article div.content {
@@ -93,4 +119,115 @@ article div.image {
 article div.content .text {
   padding-left: 5em;
   padding-right: 5em;
+}
+
+@media(max-width:768px) {
+  html {
+    height: 100vh;
+  }
+  html, body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  .hideOnDesktop {
+    display: initial;
+  }
+  .hideOnMobile {
+    display: none;
+  }
+  .mobile-header {
+    margin-left: .5em;
+    margin-top: .5em;
+    position: relative;
+  }
+  .mobile-header-menu {
+    position: absolute;
+    right: 1em;
+    top: 0;
+    font-size: .5em;
+    cursor: pointer;
+  }
+  .landing {
+    flex-direction: column;
+    position: relative;
+  }
+  .nav-menu {
+    /* background-color: aliceblue; */
+    background-color: #F8C5B3;
+    position: absolute;
+    top: 3em;
+    height: 100%;
+    padding: 0;
+    padding-top: 2em;
+    width: 100%;
+    transform: translateX(105%);
+  }
+  .nav-menu a{
+    padding-left: 2em;
+  }
+  .nav-menu.isSlid {
+    animation: slidenavin .25s linear forwards;
+  }
+  @keyframes slidenavin {
+    0% {
+      transform: translateX(105%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  div.image.isRoot {
+    text-align: center;
+  }
+}
+@media(min-width: 320px) {
+  article div.image img {
+    width: 100%;
+    max-width: 90%;
+  }
+  article div.image {
+    width: auto;
+    max-width: 100%;
+    margin-bottom: 2em;
+  }
+  article div.content {
+    width: auto;
+  }
+}
+@media(min-width: 769px) {
+  article div.image {
+    text-align: left;
+    width: auto;
+    max-width: 75%;
+    margin-bottom: 2em;
+  }
+  article div.content {
+    width: auto;
+    max-width: 75%;
+  }
+  article div.content .text {
+    padding: 0;
+  }
+  article div.image img {
+    width: 100%;
+    max-width: 75%;
+  }
+}
+@media(min-width: 1200px) {
+  .nav-menu {
+    padding: 4em;
+  }
+  article {
+    flex-direction: row;
+  }
+  article div.content .text {
+    padding-left: .5em;
+    padding-right: .5em;
+    max-width: 75%;
+  }
+  article div.image, article div.content {
+    width: 50%;
+  }
 }

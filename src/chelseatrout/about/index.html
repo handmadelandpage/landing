@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="../index.css">
+  <link href="https://fonts.googleapis.com/css?family=Coustard:900|Libre+Baskerville" rel="stylesheet">
+  <link rel="import" href="../nav-menu.html">
+</head>
+
+<body>
+  <!-- ABOUT PAGE -->
+  <section class="landing">
+    <h2 class="mobile-header hideOnDesktop">
+      <a class="chelseaHeader" href="/chelseatrout">Chelsea Trout</a>
+      <span id="mobile-header-menu" class="mobile-header-menu">Menu</span>
+    </h2>
+    <nav class="nav-menu-parent" id="nav-menu-parent">
+      <!-- nav menu will be imported from nav-menu.html -->
+    </nav>
+    <article>
+      <div class="image">
+        <img src="https://picsum.photos/400/600">
+      </div>
+      <div class="content">
+        <div class="text">
+          Bacon ipsum dolor amet ham tail burgdoggen chicken, turducken pork loin short ribs bacon landjaeger. Andouille turkey pork loin, meatball tongue ball tip sirloin biltong chuck bacon hamburger porchetta alcatra ribeye kevin. Porchetta ground round pancetta flank chicken. Beef ribs drumstick fatback chicken, pastrami short loin spare ribs jowl. Spare ribs picanha leberkas, rump biltong ham bacon drumstick. Swine bresaola porchetta fatback pork chuck brisket tongue sausage pork chop short loin rump. Ribeye beef ribs sausage picanha sirloin boudin beef frankfurter strip steak flank meatball meatloaf hamburger.
+          <br><br>
+          ilet mignon rump tail meatball tongue. Beef fatback rump, brisket beef ribs strip steak cow filet mignon flank drumstick ground round pastrami bresaola swine hamburger. Short loin brisket shankle ribeye shoulder drumstick filet mignon prosciutto corned beef jowl frankfurter tenderloin pancetta venison. Pancetta tail pastrami tongue chuck kielbasa. Ham picanha hamburger beef buffalo short ribs. Picanha turkey kielbasa shankle turducken porchetta flank bresaola tail kevin rump sausage brisket bacon.
+          <br><br>
+          Pork loin picanha ground round chuck porchetta. Beef short loin pig alcatra, pork belly burgdoggen hamburger tenderloin shank prosciutto sirloin porchetta short ribs. Pork loin ham t-bone pancetta. Turducken andouille burgdoggen tail, ribeye meatloaf flank. Boudin tenderloin ham biltong pancetta pork belly jerky.
+        </div>
+      </div>
+    </article>
+  </section>
+</body>
+</html>
+
+<script>
+  // importing nav menu
+  const content = document.querySelector('link[rel="import"]').import;
+  const navMenuParent = document.getElementById('nav-menu-parent');
+  const navMenuImport = content.querySelector('#nav-menu');
+  navMenuParent.appendChild(navMenuImport.cloneNode(true));
+//nav
+  let projectsNavActive = false;
+  let mobileNavActive = false;
+  const projectsButton = document.getElementById('project-accordion-button');
+  const accordionBuffer = document.getElementById('nav-accordion-buffer');
+  const mobileMenuButton = document.getElementById('mobile-header-menu');
+  const navMenu = document.getElementById('nav-menu');
+  projectsButton.addEventListener('click', () => {
+    if (!projectsNavActive) {
+      accordionBuffer.classList.add('isSlid');
+      return projectsNavActive = true;
+    }
+    accordionBuffer.classList.remove('isSlid');
+    return projectsNavActive = false;
+  });
+  mobileMenuButton.addEventListener('click', () => {
+    if (!mobileNavActive) {
+      navMenu.classList.add('isSlid');
+      return mobileNavActive = true;
+    }
+    navMenu.classList.remove('isSlid');
+    return mobileNavActive = false;
+  });
+
+</script>

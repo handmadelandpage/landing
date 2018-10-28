@@ -7,14 +7,19 @@ body {
 
 /* TOP SECTION */
 section.landing {
-  height: 100vh;
+  /* height: 80vh; */
   position: relative;
+  background-image: url('/images/vintage_workspace-dim.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-bottom: 10vh;
 }
 
 .bg-overlay {
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: rgba(0, 0, 0, 0.65);
   position: absolute;
   top: 0;
   left: 0;
@@ -26,14 +31,14 @@ section.why {
 }
 
 section h1 {
-  position: absolute;
+  /* position: absolute; */
   z-index: 10;
   width: 100%;
   text-align: center;
   color: white;
-  top: 20vh;
   font-size: 2em;
   letter-spacing: 2px;
+  margin-top: 5vh;
 }
 
 section h1 span {
@@ -46,13 +51,14 @@ section h1 span {
 
 .emoji-container {
   background-color: #FEDC3D;
+  /* background-color: #01ABAA; */
   width: 100%;
-  height: 8vh;
-  position: absolute;
   display: flex;
   align-items: center;
   z-index: 2;
   padding-left: 1em;
+  padding-top: .25em;
+  padding-bottom: .25em;
 }
 
 .sitename {
@@ -76,8 +82,8 @@ section h1 span {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  top: 30vh;
+  /* position: absolute;
+  top: 25vh; */
   overflow: hidden;
 }
 
@@ -126,18 +132,47 @@ section h1 span {
   }
 }
 
-.landing .cta-input-container {
-  position: absolute;
+.landing .cta-form-container {
+  margin-top: 10vh;
   width: 100%;
-  top: 70vh;
   text-align: center;
+  color: white;
 }
 
-.cta-input-container button {
+form.cta-form-container label {
+  display: block;
+  margin-bottom: .25em;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form.cta-form-container label span {
+  text-align: left;
+  width: 15em;
+  margin-bottom: .25em;
+}
+
+form.cta-form-container label input {
+  border-radius: 5px;
+  height: 2em;
+  width: 18em;
+  margin-right: 1em;
+}
+
+form .cta-inputs-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: .5em;
+}
+
+.cta-form-container button {
   padding: 10px;
   padding-left: 25px;
   padding-right: 25px;
-  width: 20vw;
   background-color: #FEDC3D;
   outline: none;
   border: none;
@@ -148,4 +183,56 @@ section h1 span {
   font-size: 1.5em;
   text-align: center;
   cursor: pointer;
+}
+
+/* WHAT SECTION */
+
+section.what {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section.what .what-header {
+  font-weight: bold;
+  font-size: 2em;
+  text-transform: uppercase;
+}
+
+section.what .what-description {
+  padding-left: 15%;
+  padding-right: 15%;
+  max-width: 50em;
+  font-size: 1.1em;
+  line-height: 1.65em;
+  text-align: center;
+}
+
+section.what .what-benefits {
+  display: flex;
+}
+
+section.what .what-benefit-entry {
+  max-width: 33%;
+  text-align: center;
+  margin-right: 1em;
+}
+
+section.what .what-benefit-entry p {
+  max-width: 15em;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #01ABAA;
+}
+
+footer .emoji-container {
+  margin-top: 1em;
+  width: auto;
+  background-color: #01ABAA;
 }

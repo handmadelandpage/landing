@@ -30,7 +30,7 @@
   // importing nav menu
   const content = document.querySelector('link[rel="import"]').import;
   const navMenuParent = document.getElementById('nav-menu-parent');
-  const navMenuImport = content.querySelector('#nav-menu');
+  const navMenuImport = document.getElementById('#nav-menu');
   navMenuParent.appendChild(navMenuImport.cloneNode(true));
 
 //nav

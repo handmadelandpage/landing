@@ -4,7 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="index.css">
   <link href="https://fonts.googleapis.com/css?family=Coustard:900|Libre+Baskerville" rel="stylesheet">
-  <link rel="import" href="/chelseatrout/nav-menu.html">
+  <!-- <link rel="import" href="/chelseatrout/nav-menu.html"> -->
 </head>
 
 <body>
@@ -16,6 +16,21 @@
     </h2>
     <nav class="nav-menu-parent" id="nav-menu-parent">
       <!-- nav menu will be imported from nav-menu.html -->
+      <nav class="nav-menu" id="nav-menu">
+        <h2 class="hideOnMobile"><a class="chelseaHeader" href="/chelseatrout">Chelsea Trout</a></h2>
+        <a id="about-link" href="/chelseatrout/about">about</a>
+        <a id="project-accordion-button">projects</a>
+        <nav class="nav-accordion isSquashed">
+          <div class="nav-accordion-links">
+            <a href="/chelseatrout/projects/first">first</a>
+            <a href="/chelseatrout/projects/second">second</a>
+            <a href="/chelseatrout/projects/third">third</a>
+          </div>
+          <div id="nav-accordion-buffer" class="nav-accordion-buffer">
+            <a href="/chelseatrout/contact" id="contact-link">contact</a>
+          </div>
+        </nav>
+      </nav>
     </nav>
     <article>
       <div class="image isRoot">
@@ -27,11 +42,12 @@
 </html>
   <!-- ROOT PAGE -->
 <script>
+  // too experimental :(
   // importing nav menu
-  const content = document.querySelector('link[rel="import"]').import;
-  const navMenuParent = document.getElementById('nav-menu-parent');
-  const navMenuImport = document.getElementById('#nav-menu');
-  navMenuParent.appendChild(navMenuImport.cloneNode(true));
+  // const content = document.querySelector('link[rel="import"]').import;
+  // const navMenuParent = document.getElementById('nav-menu-parent');
+  // const navMenuImport = content.querySelector('#nav-menu');
+  // navMenuParent.appendChild(navMenuImport.cloneNode(true));
 
 //nav
   let projectsNavActive = false;

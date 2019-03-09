@@ -13,7 +13,7 @@ a.chelseaHeader {
   letter-spacing: 1px;
 }
 
-.landing {
+.landing, .link {
   display: flex;
 }
 
@@ -127,6 +127,12 @@ article div.image {
 article div.content .text {
   padding-left: 5em;
   padding-right: 5em;
+}
+
+img.social {
+  width: 25px;
+  height: 25px;
+  padding: 5px;
 }
 
 @media(max-width:768px) {

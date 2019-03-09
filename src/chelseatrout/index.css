@@ -108,21 +108,31 @@ a.chelseaHeader.giant {
   position: relative;
 }
 
-.landing.first {
-  z-index: 3;
+#landingOne, #landingTwo, #landingThree {
   position: absolute;
+}
+
+#landingOne {
+  z-index: 3;
+}
+
+#landingTwo {
+  z-index: 2;
+}
+
+#landingThree {
+  z-index: 1;
+}
+
+.landing.first {
   animation: opacityfirst 8s ease-in-out infinite;
 }
 
 .landing.second {
-  z-index: 2;
-  position: absolute;
   animation: opacitysecond 8s ease-in-out infinite;
 }
 
 .landing.third {
-  z-index: 1;
-  position: absolute;
   animation: opacitythird 8s ease-in-out infinite;
 }
 

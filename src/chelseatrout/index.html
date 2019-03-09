@@ -50,10 +50,32 @@
   const landOne = document.getElementById('landingOne')
   const landTwo = document.getElementById('landingTwo')
   const landThree = document.getElementById('landingThree')
-  if (landOne.complete && landTwo.complete && landThree.complete) {
+  const loaded = []
+  function startAnimation() {
     landOne.classList.add('first')
     landTwo.classList.add('second')
     landThree.classList.add('third')
+  }
+  function checkLoaded() {
+    if(loaded.length === 3) {
+      startAnimation()
+    }
+  }
+  if (landOne.complete && landTwo.complete && landThree.complete) {
+    startAnimation()
+  } else {
+    landOne.onload = () => {
+      loaded.push(1)
+      checkLoaded()
+    }
+    landTwo.onload = () => {
+      loaded.push(2)
+      checkLoaded()
+    }
+    landThree.onload = () => {
+      loaded.push(3)
+      checkLoaded()
+    }
   }
 //nav
   let projectsNavActive = false;

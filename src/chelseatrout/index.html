@@ -36,9 +36,9 @@
     </nav>
     <article>
       <div class="image isRoot">
-        <img class="landing first" src="images/landing/1_800.jpg" />
-        <img class="landing second" src="images/landing/2_800.jpg" />
-        <img class="landing third" src="images/landing/3_800.jpg" />
+        <img id="landingOne" class="landing" src="images/landing/1_800.jpg" />
+        <img id="landingTwo" class="landing" src="images/landing/2_800.jpg" />
+        <img id="landingThree" class="landing" src="images/landing/3_800.jpg" />
         <!-- <img src="https://picsum.photos/750/500"> -->
       </div>
     </article>
@@ -47,13 +47,14 @@
 </html>
   <!-- ROOT PAGE -->
 <script>
-  // too experimental :(
-  // importing nav menu
-  // const content = document.querySelector('link[rel="import"]').import;
-  // const navMenuParent = document.getElementById('nav-menu-parent');
-  // const navMenuImport = content.querySelector('#nav-menu');
-  // navMenuParent.appendChild(navMenuImport.cloneNode(true));
-
+  const landOne = document.getElementById('landingOne')
+  const landTwo = document.getElementById('landingTwo')
+  const landThree = document.getElementById('landingThree')
+  if (landOne.complete && landTwo.complete && landThree.complete) {
+    landOne.classList.add('first')
+    landTwo.classList.add('second')
+    landThree.classList.add('third')
+  }
 //nav
   let projectsNavActive = false;
   let mobileNavActive = false;

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="../../index.css">
+  <link href="https://fonts.googleapis.com/css?family=Coustard:900|Libre+Baskerville" rel="stylesheet">
+  <!-- <link rel="import" href="../../nav-menu.html"> -->
+</head>
+
+<body>
+  <!-- PROJECTS PROJECT PAGE -->
+  <section class="landing">
+    <h2 class="mobile-header hideOnDesktop">
+      <a class="chelseaHeader" href="/chelseatrout">Chelsea Trout</a>
+      <span id="mobile-header-menu" class="mobile-header-menu">Menu</span>
+    </h2>
+    <nav class="nav-menu-parent" id="nav-menu-parent">
+      <!-- nav menu will be imported from nav-menu.html -->
+      <nav class="nav-menu" id="nav-menu">
+        <h2 class="hideOnMobile">
+          <a class="chelseaHeader giant" href="/chelseatrout">Chelsea Trout</a>
+          <a class="chelseaHeader clear" href="/chelseatrout">Chelsea Trout</a>
+        </h2>
+        <a id="about-link" href="/chelseatrout/about">about</a>
+        <a id="project-accordion-button">projects</a>
+        <nav class="nav-accordion isSquashed">
+          <div class="nav-accordion-links">
+            <a href="/chelseatrout/projects/the_retreat">The Retreat</a>
+            <a href="/chelseatrout/projects/hands">HANDS</a>
+          </div>
+          <div id="nav-accordion-buffer" class="nav-accordion-buffer">
+            <a href="/chelseatrout/contact" id="contact-link">contact</a>
+          </div>
+        </nav>
+      </nav>
+    </nav>
+    <article style="flex-direction: column">
+      <div class="image">
+        <img src="../../images/hands/HANDS_IG.jpg" />
+        <!-- <img src="https://picsum.photos/800/400"> -->
+      </div>
+      <div class="content">
+        <div class="text" style="padding-top: 2em;">
+          “On a trip to New Orleans last year, Chelsea Trout and Arpan Somani came across the city’s alternative newspaper <a target="_blank" href="http://www.antigravitymagazine.com/">Antigravity</a> in a coffee shop. Flipping through pages of offbeat perspectives on local art and culture, the pair had what they call a “what if moment”: What if they started a free newspaper like that for their community back home in Brooklyn?” -Newspaper Club
+          <br><br>
+          And so we founded HANDS, we built our list of contributors, and we created a team of editors. We curated, edited, and designed each issue and hand delivered it to various locations throughout Brooklyn, NY. In Volume 1 we printed 9 issues and crowdfunded $6K to cover production costs.
+          <br><br>
+          Press: <a target="_blank" href="https://www.newspaperclub.com/blog/posts/15674-lessons-on-starting-a-community-newspaper-from-brooklyns-hands">Newspaper Club</a>, <a target="_blank" href="https://www.stackmagazines.com/art-design/10-newsprint-projects/?fbclid=IwAR2Qw4w1G3YVmUbVA8VVjabyfbYo3jPprrD9a1WqyKOq3214wvpmXB8AzoQ&utm_campaign=bdd7c6aa96-EMAIL_NOV_13_2018_Stack_BEST_Shutter_Hub&utm_medium=email&utm_source=Newspaper+Club+Newsletter&utm_term=0_7e2a19d1aa-bdd7c6aa96-416830145">Stack Magazine</a>
+          <br><br>
+          <div class="link">
+            <a target="_blank" href="https://www.instagram.com/handspress/">
+              <img class="social" src="../../images/instagram.svg"/>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+</body>
+</html>
+
+<script>
+// importing nav menu
+// const content = document.querySelector('link[rel="import"]').import;
+// const navMenuParent = document.getElementById('nav-menu-parent');
+// const navMenuImport = content.querySelector('#nav-menu');
+// navMenuParent.appendChild(navMenuImport.cloneNode(true));
+//nav
+  let projectsNavActive = true;
+  let mobileNavActive = false;
+  const projectsButton = document.getElementById('project-accordion-button');
+  const accordionBuffer = document.getElementById('nav-accordion-buffer');
+  accordionBuffer.classList.add('isSlidDefault');
+  projectsButton.addEventListener('click', () => {
+    if (!projectsNavActive) {
+      accordionBuffer.classList.add('isSlid');
+      return projectsNavActive = true;
+    }
+    accordionBuffer.classList.remove('isSlidDefault');
+    accordionBuffer.classList.remove('isSlid');
+    return projectsNavActive = false;
+  });
+
+  const mobileMenuButton = document.getElementById('mobile-header-menu');
+  const navMenu = document.getElementById('nav-menu');
+  mobileMenuButton.addEventListener('click', () => {
+    if (!mobileNavActive) {
+      navMenu.classList.add('isSlid');
+      return mobileNavActive = true;
+    }
+    navMenu.classList.remove('isSlid');
+    return mobileNavActive = false;
+  });
+</script>
